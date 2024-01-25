@@ -15,11 +15,11 @@ class Solution(object):
                 search = 0
                 while s[end_index - search] == s[start_index + search]:
                     search += 1
-                    if search <= (end_index - start_index + 1) // 2:
+                    if search > (end_index - start_index + 1) // 2:
                         if end_index - start_index + 1 > longest_palindrome:
                              longest_palindrome = end_index - start_index + 1
                              longest_palindrome_index = start_index
                         break
         return s[longest_palindrome_index:longest_palindrome_index + longest_palindrome]
         
-print(Solution().longestPalindrome("babad"))
+print(Solution().longestPalindrome("aacabdkacaa"))
